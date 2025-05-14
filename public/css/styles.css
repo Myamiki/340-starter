@@ -1,6 +1,164 @@
-/******* Change Box Model ***************/
-*,
-*:before,
-*:after {
-  box-sizing: border-box;
+.hero {
+position: relative;
+width: 100%;
+min-height: 100vh;
+display: flex;
+justify-content: center;
+align-items: center;
+overflow: hidden;
+padding: 2rem;
+box-sizing: border-box;
 }
+
+.hero-img {
+position: absolute;
+top: 0;
+left: 0;
+height: 100%;
+width: 100%;
+object-fit: cover;
+z-index: 1;
+}
+
+.hero-overlay {
+position: absolute;
+top: 0;
+left: 0;
+height: 100%;
+width: 100%;
+background-color: rgba(0, 0, 0, 0.5);
+z-index: 2;
+}
+
+.top-header {
+display: flex;
+text-decoration: none;
+align-items: center;
+flex-wrap: wrap;
+background-color: #333;
+color: white;
+padding: 10px 20px;
+justify-content: space-between;
+}
+
+.siteName a, #tools a {
+text-decoration: none;
+font-weight: bolder;
+font-size: larger;
+color: aliceblue;
+}
+
+.mains {
+position: relative;
+z-index: 3;
+font-family: 'Segoe UI', sans-serif;
+background: rgba(255, 255, 255, 0.9);
+color: #222;
+max-width: 800px;
+width: 100%;
+padding: 1.5rem 2rem;
+margin: 1rem auto;
+border: 4px solid blue;
+border-radius: 10px;
+box-sizing: border-box;
+text-align: center;
+}
+
+.mains img {
+max-width: 100%;
+height: auto;
+margin: 1rem 0;
+}
+
+
+nav ul {
+display: flex;
+justify-content: center;
+gap: 2rem;
+list-style: none;
+padding: 0;
+margin: 0;
+background: transparent; 
+text-align: center;
+}
+
+nav ul li a {
+color: rgb(219, 209, 209);
+text-decoration: none;
+font-weight: bold;
+text-align: center;
+}
+
+nav ul li a\:hover {
+text-decoration: underline;
+}
+
+
+header {
+background-color: rgba(121, 119, 119, 0.9);
+color: rgb(9, 1, 1);
+text-decoration: none;
+}
+
+footer {
+background-color: rgba(34, 34, 34, 0.9);
+color: white;
+font-weight: bolder;
+text-align: center;
+padding: 10px;
+}
+
+
+h3 {
+color: black;
+font-weight: bold;
+}
+
+.wrapper {
+display: flex;
+justify-content: space-between;
+align-items: flex-start;
+gap: 2rem;
+flex-wrap: wrap;
+margin: 1rem 0;
+}
+
+.first, .second {
+flex: 1;
+min-width: 300px;
+}
+
+.upgrades-grid {
+display: grid;
+grid-template-columns: repeat(2, 1fr);
+gap: 1.5rem;
+margin-top: 1rem;
+}
+
+.upgrade-item {
+padding: 1rem;
+border-radius: 10px;
+text-align: center;
+box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
+}
+
+.upgrade-item img {
+width: 100px;
+height: auto;
+border-radius: 6px;
+}
+
+.upgrade-item p {
+margin-top: 0.5rem;
+color: rgb(12, 11, 11);
+font-weight: bold;
+}
+
+
+@media screen and (min-width: 768px) {
+main {
+padding: 2rem;
+max-width: 1000px;
+margin: auto;
+}
+}  
